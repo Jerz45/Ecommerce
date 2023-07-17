@@ -1,7 +1,7 @@
-import React from "react";
+// import React from "react";
 
 const SingleProductDetails = () => {
-  return <div>This is home page.</div>;
+  return <div className=' mt-20'>This is home page.</div>;
 };
 
 export default SingleProductDetails;

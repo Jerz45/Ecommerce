@@ -1,7 +1,7 @@
-import React from "react";
+// import React from "react";
 
 const AboutUs = () => {
-  return <div>This is AboutUs</div>;
+  return <div className=' mt-20'>This is AboutUs</div>;
 };
 
 export default AboutUs;

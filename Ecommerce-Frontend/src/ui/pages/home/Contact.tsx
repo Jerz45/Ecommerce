@@ -1,8 +1,8 @@
-import React from 'react'
+// import React from 'react'
 
 const Contact = () => {
   return (
-    <div>This is contact.</div>
+    <div className=' mt-20'>This is contact.</div>
   )
 }
 
