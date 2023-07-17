@@ -44,7 +44,7 @@ export const dashBoardRoutes = [
   {
     path: "/dashboard/home",
     component: DashBoardHome,
-    element: <DashBoardHome />,
+    // element: <DashBoardHome />,
   },
   {
     path: "/dashboard/products",

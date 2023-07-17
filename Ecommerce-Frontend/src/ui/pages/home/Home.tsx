@@ -1,9 +1,22 @@
-import React from 'react'
+import Footer from "../../molecules/Footer";
+import NavBar from "../../molecules/NavBar";
+// import LoginForm from "./LoginForm";
+import SignUpForm from "./SignUpForm";
+import LoginForm from "./LoginForm";
 
 const Home = () => {
   return (
-    <div className=' mt-20'>This is home page.</div>
-  )
-}
+    <div className="bg-gray-200">
+      <NavBar />
 
-export default Home
+      {/* <SignUpForm /> */}
+
+      <div>
+        <LoginForm />
+      </div>
+      <Footer />
+    </div>
+  );
+};
+
+export default Home;

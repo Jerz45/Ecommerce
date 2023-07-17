@@ -1,7 +1,11 @@
-// import React from "react";
+import NavBar from "../../molecules/NavBar";
 
 const SingleProductDetails = () => {
-  return <div className=' mt-20'>This is home page.</div>;
+  return (
+    <div>
+      <NavBar /> This is home page.
+    </div>
+  );
 };
 
 export default SingleProductDetails;

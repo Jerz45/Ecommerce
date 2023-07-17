@@ -1,7 +1,13 @@
-// import React from "react";
+import Footer from "../../molecules/Footer";
+import NavBar from "../../molecules/NavBar";
+
 
 const AboutUs = () => {
-  return <div className=' mt-20'>This is AboutUs</div>;
+  return <div> 
+    <NavBar />
+    This is AboutUs.
+    <Footer/>
+    </div>;
 };
 
 export default AboutUs;

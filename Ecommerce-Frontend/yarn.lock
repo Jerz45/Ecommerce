@@ -1465,6 +1465,11 @@ react-dom@^18.2.0, react-dom@>=16.8:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
 
+react-hook-form@^7.45.1:
+  version "7.45.1"
+  resolved "https://registry.npmjs.org/react-hook-form/-/react-hook-form-7.45.1.tgz"
+  integrity sha512-6dWoFJwycbuFfw/iKMcl+RdAOAOHDiF11KWYhNDRN/OkUt+Di5qsZHwA0OwsVnu9y135gkHpTw9DJA+WzCeR9w==
+
 react-icons@^4.10.1:
   version "4.10.1"
   resolved "https://registry.npmjs.org/react-icons/-/react-icons-4.10.1.tgz"
@@ -1490,12 +1495,7 @@ react-router@6.14.1:
   dependencies:
     "@remix-run/router" "1.7.1"
 
-react-tailwind@^0.0.0:
-  version "0.0.0"
-  resolved "https://registry.npmjs.org/react-tailwind/-/react-tailwind-0.0.0.tgz"
-  integrity sha512-w54Bs/EM3c09q1JfuushNQVeSKu46NfAp3FAtsxtEFR/Aka539tkIZc/0FcqveaX3LiekkM8sMwFMiVtNOHwSA==
-
-react@*, react@^18.2.0, react@>=16.8:
+react@*, "react@^16.8.0 || ^17 || ^18", react@^18.2.0, react@>=16.8:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==
