@@ -1,90 +1,93 @@
-import React, { useState } from "react";
-import SignUpForm from "./SignUpForm"; // Import the SignUpForm component
+import { useState } from "react";
+import SignUpForm from "./SignUpForm";
+import { AiOutlineClose } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
 
 const LoginForm = () => {
   const [showSignupForm, setShowSignupForm] = useState(false);
+  const [showLoginForm, setShowLoginForm] = useState(true);
 
+  const handleCloseLoginForm = () => {
+   
+    navigate("/Home");
+    
+  };
+  const navigate = useNavigate();
+
+  const hanldleSubmit = (e: React.ChangeEvent<HTMLFormElement>) => {
+    e.preventDefault();
+  };
   const handleSignUpClick = () => {
     setShowSignupForm(true);
+    setShowLoginForm(false);
   };
-
-  const handleSignupFormClose = () => {
-    setShowSignupForm(false);
-  };
+ 
 
   return (
-    <div
-      style={{
-        border: "1px solid red",
-        height: "100vh",
-        zIndex: 1,
-      }}
-    >
-      <form className="bg-white w-80 h-80 border-2 border-gray-400 rounded-md mt-1 p-4 mr-1 ml-auto">
-        <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2">
-            Email address
-          </label>
-          <input
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            type="email"
-            placeholder="Enter email"
-          />
-        </div>
-        <div className="mb-6">
-          <label className="block text-gray-700 text-sm font-bold mb-2">
-            Password
-          </label>
-          <input
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            type="password"
-            placeholder="Password"
-          />
-        </div>
-        <div className="flex-col items-center text-center">
-          <button
-            className="w-full bg-gray-400 hover:bg-gray-600 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-            type="submit"
-          >
-            Sign In
-          </button>
-          <br />
-          <span className="text-gray-500">Or</span>
-          <br />
-          <button
-            className="w-full bg-gray-400 hover:bg-gray-600 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-            type="button"
-            onClick={handleSignUpClick}
-          >
-            Sign Up
-          </button>
-        </div>
-      </form>
-
-      {showSignupForm && (
+    <>
+      {showLoginForm && (
         <div
+          className="flex items-center justify-center h-screen"
           style={{
-            border: "1px solid green",
+            border: "1px solid red",
             height: "100vh",
-            width: "100vw",
-            position: "absolute",
-            top: 0,
-            bottom: 0,
-            backdropFilter: ` blur(10px)`,
+            zIndex: 1,
           }}
         >
-          <div>
-            {/* <div className="bg-white border-2 border-gray-400 rounded-md p-4"> */}
-            <button className=" text-gray-600" onClick={handleSignupFormClose}>
-              Close
+          <form
+            onSubmit={hanldleSubmit}
+            className="bg-white w-80 h-80 border-2 border-gray-400 rounded-md mt-1 p-4 relative"
+          >
+            <button
+              className="absolute top-2 right-2 text-gray-600 hover:text-gray-900"
+              onClick={handleCloseLoginForm}
+            >
+              <AiOutlineClose />
             </button>
-            {/* <h2 className="text-2xl font-bold mb-4">Sign Up</h2> */}
-            {/* </div> */}
-            <SignUpForm />
-          </div>
+            <div className="mb-4">
+              <label className="block text-gray-700 text-sm font-bold mb-2">
+                Email address
+              </label>
+              <input
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                type="email"
+                placeholder="Enter email"
+              />
+            </div>
+            <div className="mb-6">
+              <label className="block text-gray-700 text-sm font-bold mb-2">
+                Password
+              </label>
+              <input
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                type="password"
+                placeholder="Password"
+              />
+            </div>
+            <div className="flex-col items-center text-center">
+              <button
+                className="w-full bg-gray-400 hover:bg-gray-600 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                type="submit"
+              >
+                Sign In
+              </button>
+              <br />
+              <span className="text-gray-500">Or</span>
+              <br />
+              <button
+                className="w-full bg-gray-400 hover:bg-gray-600 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                type="button"
+                onClick={handleSignUpClick}
+              >
+                Sign Up
+              </button>
+            </div>
+          </form>
         </div>
       )}
-    </div>
+
+      {showSignupForm && <SignUpForm />}
+    </>
   );
 };
 

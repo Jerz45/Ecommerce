@@ -9,6 +9,7 @@ import Home from "../ui/pages/home/Home";
 import LoginForm from "../ui/pages/home/LoginForm";
 import SingleProductDetails from "../ui/pages/home/ProductDetails";
 import Products from "../ui/pages/home/Products";
+import SignUpForm from "../ui/pages/home/SignUpForm";
 
 export const homeRoutes = [
   {
@@ -20,7 +21,7 @@ export const homeRoutes = [
     element: <SingleProductDetails />,
   },
   {
-    path: "/Products",
+    path: "/Products",   
     element: <Products />,
   },
   {
@@ -38,6 +39,10 @@ export const homeRoutes = [
   {
     path: "/loginform",
     element: <LoginForm />,
+  },
+  {
+    path: "/signupform",
+    element: <SignUpForm />,
   },
 ];
 export const dashBoardRoutes = [

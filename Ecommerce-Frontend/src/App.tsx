@@ -1,7 +1,7 @@
 // import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { dashBoardRoutes, homeRoutes } from "./Routes/routes";
-import LoginForm from "./ui/pages/home/LoginForm";
+// import LoginForm from "./ui/pages/home/LoginForm";
 
 function App() {
   return (
